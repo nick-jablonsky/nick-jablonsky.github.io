@@ -1,0 +1,185 @@
+/* Слайдер */
+.slick-slider {
+    min-width: 0;
+}
+
+/* Слайдер ініціалізований */
+.slick-slider.slick-initialized {}
+
+/* Слайдер з крапками */
+.slick-slider.slick-dotted {}
+
+/* Обмежуючий контейнер */
+.slick-list {
+    overflow: hidden;
+}
+
+/* Послідовність слайдів */
+.slick-track {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Слайд */
+.slick-slide {}
+
+/* Активний Слайд */
+.slick-slide.slick-active {}
+
+/* Слайд поточний */
+.slick-slide.slick-current {}
+
+/* Слайд по центру */
+.slick-slide.slick-center {}
+
+/* Клонований слайд */
+.slick-slide.slick-cloned {}
+
+/* Стрілки */
+.slick-arrow {
+    cursor: pointer;
+}
+
+/* Стрілка вліво */
+.slick-arrow.slick-prev {}
+
+/* Стрілка вправо */
+.slick-arrow.slick-next {}
+
+/* Стрілка не активна */
+.slick-arrow.slick-disabled {}
+
+/* Крапки */
+.slick-dots {}
+
+.slick-dots li {}
+
+/* Активна крапка */
+.slick-dots li.slick-active {}
+
+/* Елемент крапки */
+.slick-dots li button {
+    cursor: pointer;
+}
+
+/* Стилізація конкретного слайдера */
+/* Наприклад слайдера з id="slider-01" */
+
+.slider {
+    position: relative;
+    padding: 60px 0;
+}
+
+.slider .slick-arrow {
+    background: none;
+    border-radius: 50%;
+    border-color: transparent;
+    outline: none;
+    font-size: 0;
+    position: absolute;
+    opacity: .7; /* Прозорість стрілок */
+/*    top: 50%;*/
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px; /* Розміри стрілок */
+    height: 50px; /* Розміри стрілок */
+    transition: opacity .3s ease;
+}
+
+.slider .slick-arrow:hover {
+    opacity: 1;
+}
+
+.slider .slick-arrow:before,
+.slider .slick-arrow:after {
+    background-color: #999;
+    /* колір лінії стрілок */
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    /* товщина лінії стрілок */
+/*    border-radius: 2px;*/
+    /* радіус заокруглення 1/2 товщини */
+}
+
+.slider .slick-arrow:before {
+    transform: rotate(-45deg) translateY(25%);
+    transform-origin: left bottom;
+}
+
+.slider .slick-arrow:after {
+    transform: rotate(45deg) translateY(-25%);
+    transform-origin: left top;
+}
+
+.slider .slick-arrow.slick-next:before {
+    transform: rotate(45deg) translateY(25%);
+    transform-origin: right bottom;
+}
+
+.slider .slick-arrow.slick-next:after {
+    transform: rotate(-45deg) translateY(-25%);
+    transform-origin: right top;
+}
+
+.slider .slick-arrow.slick-prev {
+    left: 15px;
+    margin-right: 12px;
+    /* Відступ для < стрілки зліва */
+/*    margin-left: 30px; */
+    z-index: 1;
+}
+
+.slider .slick-arrow.slick-next {
+    right: 15px;
+    /* Відступ для > стрілки справа */
+    z-index: 1;
+}
+
+.slider .slick-arrow.slick-disabled {
+    opacity: 0.3;
+}
+
+.slider .slick-dots {
+    position: absolute;
+    left:50%;
+    bottom:0;
+    /* Відступ для крапок знизу */
+/*    margin-bottom: 50px; */
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.slider .slick-dots li {
+    list-style: none;
+    margin: 5px 0px;
+}
+
+.slider .slick-dots button {
+    border: none;
+    outline: none;
+    font-size: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #999;
+}
+
+.slider .slick-dots li.slick-active button {
+    background-color: red;
+}
+
+.slider .item {
+    padding: 0px 2px;
+    /* Інтервал між слайдами */
+}
+
+.slider .item img {
+    max-width: 100%;
+}
